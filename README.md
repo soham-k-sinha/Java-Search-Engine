@@ -1,0 +1,1 @@
+Making a Search Engine for Off Campus Housing in Amherst to solve the complexities of trying to find housing at UMass! Learning everything from scratch and documenting my process! Expected to commit almost every day.
