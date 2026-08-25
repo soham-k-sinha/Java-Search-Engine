@@ -1,7 +1,23 @@
 package Learning.MultiThreading;
 
 public class datarace {
+    private static class SyncronizedClass {
+        private int c;
+
+        public synchronized void add() {
+            this.c += 1;
+        }
+
+        public synchronized void remove() {
+            this.c -= 1;
+        }
+        
+        public synchronized int show() {
+            return this.c;
+        }
+    }
     private static int result = 0;
+    private static SyncronizedClass obj = new SyncronizedClass();
 
     public static void main(String[] args) {
         Thread worker = new Thread(() -> {
