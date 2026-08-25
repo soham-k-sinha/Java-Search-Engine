@@ -1,15 +1,17 @@
 package Learning.MultiThreading;
-public class MultiThread extends Thread {
+
+import java.util.List;
+public class MultiThread implements Runnable {
+    public List<String> tracker;
+    public MultiThread(List<String> tracker) {
+        this.tracker = tracker;
+    }
     
-    // A thread that prints 1-5 with a 1 second gap
     @Override
     public void run() {
-        for (int i = 1; i <= 5; i++) {
-            System.out.println(i);
-            try {
-                Thread.sleep(1000);
-            } catch (InterruptedException e) {
-            }
+        for (int i = 1; i < 6; i++) {
+            String curr = Thread.currentThread().getName();
+            this.tracker.add("https://www." + curr + "/" + i + ".com");
         }
     }
 }

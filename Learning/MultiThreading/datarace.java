@@ -1,39 +1,23 @@
 package Learning.MultiThreading;
 
-public class datarace {
-    private static class SyncronizedClass {
-        private int c;
+import java.util.List;
+import java.util.ArrayList;
+public class DataRace {
 
-        public synchronized void add() {
-            this.c += 1;
+    public static void main(String[] args) throws InterruptedException {
+        List<String> urls = new ArrayList<>();
+        List<Thread> threads = new ArrayList<>();
+
+        for (int i = 0; i < 10; i++) {
+            Thread thread = new Thread(new MultiThread(urls));
+            threads.add(thread);
+            thread.start();
         }
 
-        public synchronized void remove() {
-            this.c -= 1;
+        for (Thread t : threads) {
+            t.join();
         }
-        
-        public synchronized int show() {
-            return this.c;
-        }
-    }
-    private static int result = 0;
-    private static SyncronizedClass obj = new SyncronizedClass();
 
-    public static void main(String[] args) {
-        Thread worker = new Thread(() -> {
-            result = 5005; // Line A
-        });
-
-        worker.start(); 
-
-        // CRITICAL ERROR: .join() is removed!
-        // try {
-        //     worker.join();
-        // } catch (InterruptedException e) {
-            
-        // }
-
-        // Line B: Will this print 0 or 5005?
-        System.out.println("Result is: " + result); 
+        System.out.println("Expected: 50, Actual: " + urls.size());
     }
 }
