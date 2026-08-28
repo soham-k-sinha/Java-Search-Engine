@@ -1,9 +1,9 @@
 package Learning.MultiThreading;
 
-import java.util.List;
+import java.util.concurrent.ConcurrentLinkedQueue;
 public class MultiThread implements Runnable {
-    public List<String> tracker;
-    public MultiThread(List<String> tracker) {
+    public ConcurrentLinkedQueue<String> tracker;
+    public MultiThread(ConcurrentLinkedQueue<String> tracker) {
         this.tracker = tracker;
     }
     
@@ -11,7 +11,7 @@ public class MultiThread implements Runnable {
     public void run() {
         for (int i = 1; i < 6; i++) {
             String curr = Thread.currentThread().getName();
-            this.tracker.add("https://www." + curr + "/" + i + ".com");
+            this.tracker.offer("https://www." + curr + "/" + i + ".com");
         }
     }
 }
