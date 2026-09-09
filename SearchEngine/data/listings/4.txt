@@ -1,0 +1,11 @@
+Doc ID: 4
+Source Name: esquire
+Address: north
+Price: 3,500
+Source URL: www.esquire
+Raw Description: Small rooms, great park. Amazing garden for kids.
+# of Bedrooms: 2
+# of Bathrooms: 2
+Contact Info: esquire@gmail.com
+Lease terms: good
+Amenities: park

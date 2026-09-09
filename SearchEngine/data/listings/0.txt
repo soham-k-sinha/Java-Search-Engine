@@ -1,0 +1,11 @@
+Doc ID: 0
+Source Name: north apartments
+Address: north of here
+Price: 2,000
+Source URL: www.
+Raw Description: Good rooms, very spacious. On bus route 33.
+# of Bedrooms: 3
+# of Bathrooms: 2
+Contact Info: gmail.com
+Lease terms: don't run
+Amenities: pool

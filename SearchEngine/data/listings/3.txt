@@ -1,0 +1,11 @@
+Doc ID: 3
+Source Name: oberoi
+Address: hadley
+Price: 2,000
+Source URL: www.oberoi
+Raw Description: Spacious 2 bedroom apartment with in-unit washer dryer, hardwood floors, five minute walk to UMass campus. Heat and hot water included. Off-street parking available.
+# of Bedrooms: 1
+# of Bathrooms: 1
+Contact Info: oberoi@gmail.com
+Lease terms: fun
+Amenities: gym
