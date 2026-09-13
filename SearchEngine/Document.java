@@ -92,6 +92,12 @@ public class Document {
         }
     }
 
+    public String getSearchableText() {
+        String concat = "{0} {1} {2} {3} {4} {5} {6}";
+        String content = MessageFormat.format(concat, sourceName, address, price, rawDescription, bedrooms, bathrooms, amenities);
+
+        return content;
+    }
 
     public static void main(String[] args) {
         Document doc1 = new Document("north apartments", "www.", "north of here", 3, 2000, 2, 
