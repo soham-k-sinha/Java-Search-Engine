@@ -99,6 +99,10 @@ public class Document {
         return content;
     }
 
+    public int getDocId() {
+        return this.docId;
+    }
+
     public static void main(String[] args) {
         Document doc1 = new Document("north apartments", "www.", "north of here", 3, 2000, 2, 
         "Good rooms, very spacious. On bus route 33.", 
