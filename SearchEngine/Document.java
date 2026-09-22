@@ -63,24 +63,30 @@ public class Document {
     @Override
     public String toString() {
         String template = """
-        Doc ID: {0}
-        Source Name: {1}
-        Address: {2}
-        Price: {3}
-        Source URL: {4}
-        Raw Description: {5}
-        # of Bedrooms: {6}
-        # of Bathrooms: {7}
-        Contact Info: {8}
-        Lease terms: {9}
-        Amenities: {10}
-        """;
+    Doc ID: {0}
+    Source Name: {1}
+    Address: {2}
+    Price: {3}
+    Source URL: {4}
+    Raw Description: {5}
+    # of Bedrooms: {6}
+    # of Bathrooms: {7}
+    Contact Info: {8}
+    Lease terms: {9}
+    Amenities: {10}""";
         String content = MessageFormat.format(template, docId, sourceName, address, price, sourceUrl, 
             rawDescription, bedrooms, bathrooms, contactInfo, leaseTerms, amenities);
         return content;
     }
 
     public void addListing() {
+        Path dir = Paths.get("data/listings/");
+        try {
+            Files.createDirectories(dir);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
         Path path = Paths.get("data/listings/" + this.docId + ".txt");
         String content = this.toString();
 

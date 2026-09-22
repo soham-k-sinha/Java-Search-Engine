@@ -1,11 +1,11 @@
 Doc ID: 1
-Source Name: boulders
-Address: bold
-Price: 4,000
-Source URL: www.boulders
-Raw Description: Cozy studio on bus route 31, all utilities included. Recently renovated kitchen with dishwasher. Quiet neighborhood near Atkins Farms
-# of Bedrooms: 3
-# of Bathrooms: 2
-Contact Info: boulders@gmail.com
-Lease terms: don't run
-Amenities: spa
+Source Name: UMass Housing
+Address: 456 North Pleasant St
+Price: 1,200
+Source URL: https://housing.umass.edu/456
+Raw Description: Cozy studio on bus route 31, all utilities included. Recently renovated kitchen with dishwasher. Quiet neighborhood near Atkins Farms.
+# of Bedrooms: 1
+# of Bathrooms: 1
+Contact Info: 413-555-0202
+Lease terms: 9 month lease
+Amenities: utilities included, dishwasher
