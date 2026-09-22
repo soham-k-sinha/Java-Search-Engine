@@ -1,11 +1,11 @@
 Doc ID: 316
 Source Name: Craigslist
-Address: Amherst
-Price: 850
-Source URL: https://www.craigslist.org/view/d/amherst-3br-1ba-in-unit-d-amherst/1NJFvgap9ZexJ7QgkzGqzs
-Raw Description: This is a nice private room available in a 4 bedroom shared apartment with three other housemates, located just steps from the bus stop. There is no available parking at this property. Shared kitchen, bathroom and living room space. Washer and dryer in the unit. Utilities included: electricity, heat, gas and water. Is not pet friendly. Date Available: September 1st 2026. $850/month rent. $850 security deposit and Last month rent required. Please submit the application form on this page or contact Jai Fuller Property Management at show contact info to learn more. UNIT FEATURES: In-unit washer/dryer (not coin-op!) Window coverings APPLIANCES: Microwave Refrigerator Range oven Security deposit: $850 (equal to one month rent)
-# of Bedrooms: 1
-# of Bathrooms: 1
+Address: Amherst area
+Price: 4,995
+Source URL: https://www.craigslist.org/view/d/sunderland-beautiful-brand-new-home/w9NdVg9FGHFKxd9EDy3fk9
+Raw Description: Beautiful new construction 5 bedroom, 2 bath home in Sunderland, MA available June 1, 2027. Minutes to AMHERST. High end finishes including hardwood floors, stone countertops, energy efficient propane forced air heat and air conditioning. Stainless steel appliances, dishwasher, in unit washer & dryer. Large yard, off street parking, walk to bus stop. Owner pays for water/sewer, trash and provides all exterior maintenance including snow removal and lawn care. 24/7 professional management. Tenants responsible for heat (propane), electricity and any desired cable/internet. Pets considered. No smoking.
+# of Bedrooms: 5
+# of Bathrooms: 2
 Contact Info: 
 Lease terms: rent period: monthly
-Amenities: w/d in unit, no parking, no smoking
+Amenities: w/d in unit, off-street parking, no smoking, air conditioning

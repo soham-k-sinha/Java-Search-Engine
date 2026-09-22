@@ -10,7 +10,7 @@ import java.util.concurrent.Future;
 
 public class CrawlManager {
 
-    private static final int THREAD_POOL_SIZE = 4;
+    private static final int THREAD_POOL_SIZE = 5;
     private static final String INDEX_PATH = "data/index.ser";
     private static final int SERVER_PORT = 8080;
 
@@ -27,6 +27,7 @@ public class CrawlManager {
             Future<List<Document>> valley = pool.submit(new ValleyPMAdapter());
             Future<List<Document>> craigslist = pool.submit(new CraigslistAdapter());
             Future<List<Document>> umassLocal = pool.submit(new UMassLocalAdapter());
+            Future<List<Document>> zumper = pool.submit(new ZumperAdapter());
 
             List<Document> allListings = new ArrayList<>();
 
@@ -49,6 +50,11 @@ public class CrawlManager {
             List<Document> umassResults = umassLocal.get();
             allListings.addAll(umassResults);
             System.out.println("[CrawlManager] UMass Local: " + umassResults.size() + " listings");
+
+            System.out.println("[CrawlManager] Waiting for Zumper adapter...");
+            List<Document> zumperResults = zumper.get();
+            allListings.addAll(zumperResults);
+            System.out.println("[CrawlManager] Zumper: " + zumperResults.size() + " listings");
 
             System.out.println("\n[CrawlManager] Raw total: " + allListings.size() + " listings");
 

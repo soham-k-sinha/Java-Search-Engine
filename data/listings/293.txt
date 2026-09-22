@@ -1,11 +1,11 @@
 Doc ID: 293
-Source Name: Valley Property Management
-Address: Hadley, MA
+Source Name: Zumper
+Address: 3337 Cottage St, Amherst, MA 01002
 Price: 0
-Source URL: https://valleypm.com/property/1-bedroom-apartment-for-rent-hadley-ma/
-Raw Description: Welcome to this quiet apartment rental on River Drive Hadley — a beautifully maintained, oversized 1-bedroom, 1-bathroom apartment offering the perfect blend of comfort, character, and convenience. Situated in a scenic and peaceful north Hadley location, this apartment is filled with excellent natural light that beautifully highlights the gorgeous, pristine hardwood floors stretching throughout the living spaces. The layout is exceptionally spacious, providing plenty of room for both a comfortable living setup and a dedicated home office workspace if needed.
-# of Bedrooms: 1
+Source URL: https://www.zumper.com/apartment-buildings/p1686734/33-37-cottage-street-amherst-ma
+Raw Description: 33-37 Cottage Street
+# of Bedrooms: 3
 # of Bathrooms: 1
-Contact Info: 413-225-1105
-Lease terms: Payments Required: First Mo.
-Amenities: Rent Includes: Lawn & Yard Care, Snow Plowing (Tenants Shovel), Water & Sewer Heat Type: Oil Air Conditioning: Window AC Possible (tenant provides) Appliances Provided: Fridge, Stove Laundry: Laundrom
+Contact Info: (844) 432-0256 ext. 4526
+Lease terms: 
+Amenities: 

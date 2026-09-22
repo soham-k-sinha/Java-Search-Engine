@@ -1,11 +1,11 @@
 Doc ID: 281
-Source Name: Kamins Real Estate
-Address: 289 Pelham Rd #2, Amherst MA
+Source Name: Zumper
+Address: 75 Cowls Rd, Amherst, MA 01002
 Price: 0
-Source URL: https://kaminsrealestate.com/rental/289-pelham-rd-2/
-Raw Description: 289 Pelham Rd #2. 4 bedroom, 1 bathroom rental in the Amherst area.
-# of Bedrooms: 4
-# of Bathrooms: 1
-Contact Info: (413) 253-2515
+Source URL: https://www.zumper.com/apartment-buildings/p362287/north-square-apartments-at-the-mill-district-amherst-ma
+Raw Description: North Square Apartments at The Mill District. Features: Outdoor Space, On-Site Laundry, Carpet, High Ceilings, Wheelchair Accessible, Package Service, Residents Lounge, On-Site Management, EV Charging, Fitness Center, Elevator, Controlled Access, Storage, Pets Allowed
+# of Bedrooms: 3
+# of Bathrooms: 0
+Contact Info: (774) 224-6067
 Lease terms: 
-Amenities: 
+Amenities: Outdoor Space, On-Site Laundry, Carpet, High Ceilings, Wheelchair Accessible, Package Service, Residents Lounge, On-Site Management, EV Charging, Fitness Center, Elevator, Controlled Access, Storage, Pets Allowed

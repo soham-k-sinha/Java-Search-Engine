@@ -1,11 +1,11 @@
 Doc ID: 291
-Source Name: Craigslist
-Address: Amherst area
-Price: 4,995
-Source URL: https://www.craigslist.org/view/d/sunderland-beautiful-brand-new-home/w9NdVg9FGHFKxd9EDy3fk9
-Raw Description: Beautiful new construction 5 bedroom, 2 bath home in Sunderland, MA available June 1, 2027. Minutes to AMHERST. High end finishes including hardwood floors, stone countertops, energy efficient propane forced air heat and air conditioning. Stainless steel appliances, dishwasher, in unit washer & dryer. Large yard, off street parking, walk to bus stop. Owner pays for water/sewer, trash and provides all exterior maintenance including snow removal and lawn care. 24/7 professional management. Tenants responsible for heat (propane), electricity and any desired cable/internet. Pets considered. No smoking.
-# of Bedrooms: 5
-# of Bathrooms: 2
+Source Name: Zumper
+Address: 986 S East St, Amherst, MA 01002
+Price: 0
+Source URL: https://www.zumper.com/apartment-buildings/p1108835/986-south-east-street-amherst-ma
+Raw Description: 986 South East St. Features: Outdoor Space, Pets Allowed
+# of Bedrooms: 2
+# of Bathrooms: 1
 Contact Info: 
-Lease terms: rent period: monthly
-Amenities: w/d in unit, off-street parking, no smoking, air conditioning
+Lease terms: 
+Amenities: Outdoor Space, Pets Allowed

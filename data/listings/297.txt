@@ -1,11 +1,11 @@
 Doc ID: 297
-Source Name: Craigslist
-Address: Russell Street Hadley MA
-Price: 2,000
-Source URL: https://www.craigslist.org/view/d/hadley-pets-considered-close-to-bus/79tTztHcHGoGYdq7b2hAor
-Raw Description: Available Now-Spacious first floor two bedroom in Hadley. Kitchen with electric stove, refrigerator and ample counter and cabinet space. Kitchen opens to the living area with a ceiling fan. Two bedrooms. Entry porch for tenant's use. Full bath with tub. Shared washer and dryer for tenant's use on the first floor. Shared yard. Great location! Close to the bus stop on Route 9. Off-street parking included for three cars. Tenant responsible for electricity and gas. Included in rent trash, lawncare, water/sewer and snow removal. No smoking. Pet considered. Year's lease. First, Last and Security Deposit of One Month's Rent. Guarantor considered. Listing ID 3139
-# of Bedrooms: 2
+Source Name: Zumper
+Address: 26 Greenleaves Dr - 609Unit 609 #1, Amherst, MA 01002
+Price: 0
+Source URL: https://www.zumper.com/listings/64436324/1-bedroom-amherst-ma
+Raw Description: 26 Greenleaves Dr - 609Unit 609 #1. Features: Carpet
+# of Bedrooms: 1
 # of Bathrooms: 1
-Contact Info: 
-Lease terms: rent period: monthly
-Amenities: laundry on site, off-street parking
+Contact Info: (844) 243-9694 ext. 4157
+Lease terms: 
+Amenities: Carpet

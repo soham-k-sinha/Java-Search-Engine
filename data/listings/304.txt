@@ -1,11 +1,11 @@
 Doc ID: 304
-Source Name: Valley Property Management
-Address: 423 N East St, Amherst, MA 01002
+Source Name: Zumper
+Address: 30 Gatehouse Rd #201, Amherst, MA 01002
 Price: 0
-Source URL: https://valleypm.com/property/amherst-2-bedroom-apartment/
-Raw Description: Experience quiet, comfortable living in this Amherst 2 bedroom apartment. Located on the second floor of a private duplex, this home offers breathtaking views of the Pelham Hills and the convenience of heat and hot water included in the rent. Perfect for those seeking a balance of nature and accessibility, this Amherst 2 bedroom apartment provides a serene retreat while remaining just minutes from downtown Amherst and UMass. Under 2 miles to Amherst center and 2.3 miles to UMass Campus Available Sept 2026!
-# of Bedrooms: 2
-# of Bathrooms: 1
-Contact Info: 413-225-1105
-Lease terms: Payments Required: First Mo.
-Amenities: Rent Includes: Heat, Hot Water, Lawn & Yard Care, Snow Plowing (Tenants Shovel), Trash & Recycling, Water & Sewer Heat Type: Included in Rent Air Conditioning: Yes Appliances Provided: Fridge, Stove,
+Source URL: https://www.zumper.com/listings/29486325p/3-bedroom-amherst-ma
+Raw Description: 30 Gatehouse Rd #201. Features: On-Site Laundry, Dishwasher, Pets Allowed
+# of Bedrooms: 3
+# of Bathrooms: 2
+Contact Info: 
+Lease terms: 
+Amenities: On-Site Laundry, Dishwasher, Pets Allowed

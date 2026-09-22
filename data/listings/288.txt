@@ -1,11 +1,11 @@
 Doc ID: 288
-Source Name: Kamins Real Estate
-Address: 98 Stockbridge St 2 – Hadley, Hadley MA
+Source Name: Zumper
+Address: 90 N Prospect St, Amherst, MA 01002
 Price: 0
-Source URL: https://kaminsrealestate.com/rental/98-stockbridge-st-2-hadley/
-Raw Description: 98 Stockbridge St 2 – Hadley. 2 bedroom, 1 bathroom rental in the Amherst area.
+Source URL: https://www.zumper.com/apartment-buildings/p1684380/90-north-prospect-street-amherst-ma
+Raw Description: 90 North Prospect Street. Features: Outdoor Space
 # of Bedrooms: 2
 # of Bathrooms: 1
-Contact Info: (413) 253-2515
+Contact Info: (844) 336-1024 ext. 5596
 Lease terms: 
-Amenities: 
+Amenities: Outdoor Space

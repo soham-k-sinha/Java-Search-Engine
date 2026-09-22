@@ -1,11 +1,11 @@
 Doc ID: 280
-Source Name: Craigslist
-Address: Warren Wright Rd Belchertown
-Price: 2,300
-Source URL: https://www.craigslist.org/view/d/amherst-bedroom-duplex-on-amherst/c1zUkUntE3M25ZXUHyHheM
-Raw Description: Nicely updated 3 bed 1.5 bath townhouse style unit just over the Amherst/Belchertown line. This unit is available now with a lease through July 28, 2027 then renewable yearly on 8/1. Well appointed with quartz countertops, stainless steel appliances (Fridge, Range, Dishwasher), and in unit washer/dryer. The apartment also comes with its own deck and a private partially fenced yard. Just a few minutes drive from Amherst center and UMass. Sorry no undergrad students. All else welcome to apply. Good credit score a must! Landlord is responsible for: lawn, snow, water/sewer, trash/recycling Tenant is responsible for: Electric, heat, cable/internet/wifi No smoking/vaping. The housing advertised may no longer be available for rental.
-# of Bedrooms: 3
-# of Bathrooms: 2
-Contact Info: 
-Lease terms: rent period: monthly
-Amenities: w/d in unit, off-street parking
+Source Name: Zumper
+Address: 1A Rolling Green Dr, Amherst, MA 01002
+Price: 0
+Source URL: https://www.zumper.com/apartment-buildings/p478956/1a-rolling-green-drive-amherst-ma
+Raw Description: Rolling Green Apartments. Features: Balcony, On-Site Laundry, Air Conditioning, Walk-In Closets, Swimming Pool, On-Site Management, Outdoor Space, Pets Allowed
+# of Bedrooms: 4
+# of Bathrooms: 1
+Contact Info: (774) 332-1837
+Lease terms: 
+Amenities: Balcony, On-Site Laundry, Air Conditioning, Walk-In Closets, Swimming Pool, On-Site Management, Outdoor Space, Pets Allowed

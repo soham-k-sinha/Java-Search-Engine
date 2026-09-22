@@ -5,13 +5,18 @@ import java.net.ServerSocket;
 import java.net.Socket;
 import java.net.URLDecoder;
 import java.nio.charset.StandardCharsets;
+import java.nio.file.Files;
+import java.nio.file.Path;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 
 public class Server {
     private final InvertedIndex index;
     private final int port;
+    private final ExecutorService threadPool = Executors.newFixedThreadPool(8);
 
     public Server(int port, InvertedIndex index) {
         this.port = port;
@@ -19,28 +24,24 @@ public class Server {
     }
 
     public void start() throws IOException {
-        // Step 1: Open a port and listen for connections
         ServerSocket serverSocket = new ServerSocket(port);
         System.out.println("Server running on http://localhost:" + port);
 
-        // This loop runs forever, handling one request at a time
         while (true) {
-            // accept() blocks until a browser/client connects
             Socket client = serverSocket.accept();
-
-            try {
-                handleRequest(client);
-            } catch (Exception e) {
-                e.printStackTrace();
-            } finally {
-                client.close();
-            }
+            threadPool.submit(() -> {
+                try {
+                    handleRequest(client);
+                } catch (Exception e) {
+                    e.printStackTrace();
+                } finally {
+                    try { client.close(); } catch (IOException ignored) {}
+                }
+            });
         }
     }
 
     private void handleRequest(Socket client) throws IOException {
-        // Step 2: Read the request line the browser sends
-        // Browser sends something like: "GET /search?q=parking+campus&limit=5 HTTP/1.1"
         BufferedReader in = new BufferedReader(new InputStreamReader(client.getInputStream()));
         String requestLine = in.readLine();
 
@@ -49,10 +50,14 @@ public class Server {
         String[] parts = requestLine.split(" ");
         if (parts.length < 2) return;
 
-        String method = parts[0];   // "GET"
-        String fullPath = parts[1]; // "/search?q=parking+campus&limit=5"
+        String method = parts[0];
+        String fullPath = parts[1];
 
-        // Step 3: Split the path from the query string
+        if (method.equals("OPTIONS")) {
+            sendCorsPreflightResponse(client);
+            return;
+        }
+
         String path;
         Map<String, String> queryParams = new HashMap<>();
 
@@ -64,25 +69,24 @@ public class Server {
             path = fullPath;
         }
 
-        // Step 4: Route to the right handler based on the path
-        if (path.equals("/search")) {
+        if (path.equals("/")) {
+            serveStaticFile(client, "SearchEngine/static/index.html", "text/html");
+        } else if (path.equals("/search")) {
             handleSearch(client, queryParams);
         } else if (path.startsWith("/listing/")) {
             String idStr = path.substring("/listing/".length());
             handleListing(client, idStr);
         } else {
-            sendResponse(client, 404, "{\"error\": \"Not found\"}");
+            sendResponse(client, 404, "application/json", "{\"error\": \"Not found\"}");
         }
     }
 
-    // Parses "q=parking+campus&limit=5" into a map: {q: "parking campus", limit: "5"}
     private Map<String, String> parseQueryParams(String queryString) {
         Map<String, String> params = new HashMap<>();
         String[] pairs = queryString.split("&");
         for (String pair : pairs) {
             String[] keyValue = pair.split("=", 2);
             if (keyValue.length == 2) {
-                // URLDecoder turns "parking+campus" back into "parking campus"
                 String key = URLDecoder.decode(keyValue[0], StandardCharsets.UTF_8);
                 String value = URLDecoder.decode(keyValue[1], StandardCharsets.UTF_8);
                 params.put(key, value);
@@ -96,33 +100,30 @@ public class Server {
         int limit = Integer.parseInt(params.getOrDefault("limit", "10"));
 
         if (query.isEmpty()) {
-            sendResponse(client, 400, "{\"error\": \"Missing query parameter 'q'\"}");
+            sendResponse(client, 400, "application/json", "{\"error\": \"Missing query parameter 'q'\"}");
             return;
         }
 
-        // Use search method
         List<Integer> docIds = index.search(query);
 
-        // Cap results at the limit
         if (docIds.size() > limit) {
             docIds = docIds.subList(0, limit);
         }
 
-        // Build JSON response manually
         StringBuilder json = new StringBuilder();
-        json.append("{\"query\": \"").append(query).append("\", \"results\": [");
+        json.append("{\"query\": \"").append(escapeJson(query)).append("\", \"results\": [");
 
-        for (int i = 0; i < docIds.size(); i++) {
-            int docId = docIds.get(i);
-            // Load the listing file from disk and format as JSON
-            json.append(documentToJson(docId));
-            if (i < docIds.size() - 1) {
-                json.append(", ");
-            }
+        boolean first = true;
+        for (int docId : docIds) {
+            String docJson = documentToJson(docId);
+            if (docJson == null) continue;
+            if (!first) json.append(", ");
+            json.append(docJson);
+            first = false;
         }
 
         json.append("]}");
-        sendResponse(client, 200, json.toString());
+        sendResponse(client, 200, "application/json", json.toString());
     }
 
     private void handleListing(Socket client, String idStr) throws IOException {
@@ -130,23 +131,21 @@ public class Server {
             int docId = Integer.parseInt(idStr);
             String json = documentToJson(docId);
             if (json != null) {
-                sendResponse(client, 200, json);
+                sendResponse(client, 200, "application/json", json);
             } else {
-                sendResponse(client, 404, "{\"error\": \"Listing not found\"}");
+                sendResponse(client, 404, "application/json", "{\"error\": \"Listing not found\"}");
             }
         } catch (NumberFormatException e) {
-            sendResponse(client, 400, "{\"error\": \"Invalid listing ID\"}");
+            sendResponse(client, 400, "application/json", "{\"error\": \"Invalid listing ID\"}");
         }
     }
 
-    // Reads a listing file from disk and returns it as a JSON string
     private String documentToJson(int docId) {
         File file = new File("data/listings/" + docId + ".txt");
         if (!file.exists()) return null;
 
         try {
             String content = new String(java.nio.file.Files.readAllBytes(file.toPath()));
-            // Parse the fields back out of the text file
             Map<String, String> fields = new HashMap<>();
             for (String line : content.split("\n")) {
                 line = line.trim();
@@ -158,11 +157,11 @@ public class Server {
                 }
             }
 
-            // Build JSON manually
             return String.format(
                 "{\"docId\": %d, \"address\": \"%s\", \"price\": \"%s\", \"bedrooms\": \"%s\", " +
                 "\"bathrooms\": \"%s\", \"source\": \"%s\", \"sourceUrl\": \"%s\", " +
-                "\"description\": \"%s\", \"amenities\": \"%s\"}",
+                "\"description\": \"%s\", \"amenities\": \"%s\", \"leaseTerms\": \"%s\", " +
+                "\"contactInfo\": \"%s\"}",
                 docId,
                 escapeJson(fields.getOrDefault("Address", "")),
                 escapeJson(fields.getOrDefault("Price", "")),
@@ -171,14 +170,15 @@ public class Server {
                 escapeJson(fields.getOrDefault("Source Name", "")),
                 escapeJson(fields.getOrDefault("Source URL", "")),
                 escapeJson(fields.getOrDefault("Raw Description", "")),
-                escapeJson(fields.getOrDefault("Amenities", ""))
+                escapeJson(fields.getOrDefault("Amenities", "")),
+                escapeJson(fields.getOrDefault("Lease terms", "")),
+                escapeJson(fields.getOrDefault("Contact Info", ""))
             );
         } catch (IOException e) {
             return null;
         }
     }
 
-    // JSON breaks if your text contains quotes or newlines. This escapes them.
     private String escapeJson(String s) {
         return s.replace("\\", "\\\\")
                 .replace("\"", "\\\"")
@@ -186,8 +186,37 @@ public class Server {
                 .replace("\r", "");
     }
 
-    // Writes a complete HTTP response to the client
-    private void sendResponse(Socket client, int statusCode, String body) throws IOException {
+    private void serveStaticFile(Socket client, String filePath, String contentType) throws IOException {
+        Path path = Path.of(filePath);
+        if (!Files.exists(path)) {
+            sendResponse(client, 404, "text/plain", "File not found");
+            return;
+        }
+        byte[] fileBytes = Files.readAllBytes(path);
+
+        OutputStream out = client.getOutputStream();
+        String headers = "HTTP/1.1 200 OK\r\n"
+            + "Content-Type: " + contentType + "; charset=utf-8\r\n"
+            + "Content-Length: " + fileBytes.length + "\r\n"
+            + "Access-Control-Allow-Origin: *\r\n"
+            + "\r\n";
+        out.write(headers.getBytes(StandardCharsets.UTF_8));
+        out.write(fileBytes);
+        out.flush();
+    }
+
+    private void sendCorsPreflightResponse(Socket client) throws IOException {
+        OutputStream out = client.getOutputStream();
+        String response = "HTTP/1.1 204 No Content\r\n"
+            + "Access-Control-Allow-Origin: *\r\n"
+            + "Access-Control-Allow-Methods: GET, OPTIONS\r\n"
+            + "Access-Control-Allow-Headers: Content-Type\r\n"
+            + "\r\n";
+        out.write(response.getBytes(StandardCharsets.UTF_8));
+        out.flush();
+    }
+
+    private void sendResponse(Socket client, int statusCode, String contentType, String body) throws IOException {
         String statusText;
         switch (statusCode) {
             case 200: statusText = "OK"; break;
@@ -197,10 +226,10 @@ public class Server {
         }
 
         OutputStream out = client.getOutputStream();
-        // HTTP response format: status line, headers, blank line, body
         String response = "HTTP/1.1 " + statusCode + " " + statusText + "\r\n"
-            + "Content-Type: application/json\r\n"
+            + "Content-Type: " + contentType + "\r\n"
             + "Content-Length: " + body.getBytes(StandardCharsets.UTF_8).length + "\r\n"
+            + "Access-Control-Allow-Origin: *\r\n"
             + "\r\n"
             + body;
         out.write(response.getBytes(StandardCharsets.UTF_8));
@@ -208,7 +237,6 @@ public class Server {
     }
 
     public static void main(String[] args) throws IOException {
-        // Build the index with your fake listings
         InvertedIndex idx = new InvertedIndex();
 
         Document doc1 = new Document("Kamins", "https://kamins.com/123",
@@ -227,7 +255,6 @@ public class Server {
         doc2.addListing();
         idx.computeIdf();
 
-        // Start the server
         Server server = new Server(8080, idx);
         server.start();
     }

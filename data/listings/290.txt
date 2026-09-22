@@ -1,11 +1,11 @@
 Doc ID: 290
-Source Name: Kamins Real Estate
-Address: 235B Amherst Road, B/235 Amherst Road, Belchertown MA 01007
-Price: 1,450
-Source URL: https://kaminsrealestate.com/rental/235b-amherst-road/
-Raw Description: 235B Amherst Road. 2 bedroom, 1 bathroom rental in the Amherst area. $1450/month.
+Source Name: Zumper
+Address: 410 Old Montague Rd, Amherst, MA 01002
+Price: 0
+Source URL: https://www.zumper.com/apartment-buildings/p1038340/the-elms-at-410-old-montague-rd-amherst-amherst-ma
+Raw Description: 410 Old Montague Road. Features: On-Site Laundry, Pets Allowed
 # of Bedrooms: 2
-# of Bathrooms: 1
-Contact Info: (413) 253-2515
+# of Bathrooms: 0
+Contact Info: (844) 326-6607 ext. 7723
 Lease terms: 
-Amenities: 
+Amenities: On-Site Laundry, Pets Allowed

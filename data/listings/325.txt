@@ -1,11 +1,11 @@
 Doc ID: 325
-Source Name: Craigslist
-Address: Amherst area
-Price: 4,000
-Source URL: https://www.craigslist.org/view/d/amherst-spacious-bedroom-apartment/gAATWKqo8RGoirHqJ3RIiw
-Raw Description: Spacious 4 Bedroom Apartment - Available June 2027! 30 Gatehouse Road, 104, Amherst, MA 01002 4000.00 / Month 4 BEDROOMS | 2 BATHROOMS Interested? Fill out this form: https://renter.turbotenant.com/general-prescreener/T3duZXI6MTUwMjUw?property=2842186&source=cl Have questions? Contact the Landlord: https://rental.turbotenant.com/p/30-gatehouse-road-amherst-ma-unit-104/6e050dac-13ee-4735-ad78-aa8f747fef1d?source=craigslist Property Description: At Echo Village Apartments, you'll find comfortable four bedroom apartment homes boasting open floor plans with designer wood inspired flooring, newly updated kitchens including dishwasher, stove, and refrigerator, full modern bathrooms with some floor plans including 2 full baths, comfortably sized bedrooms and much more. Located a few minutes from the nearest PVTA 30 bus line to the UMass campus and just minutes away from the center of Amherst where you'll find restaurants, shopping, and so much more. Heat, hot water, electricity is included. T
-# of Bedrooms: 4
+Source Name: Zumper
+Address: 150 Old Amherst Rd #1, Sunderland, MA 01375
+Price: 0
+Source URL: https://www.zumper.com/listings/13113421p/5-bedroom-sunderland-ma
+Raw Description: 150 Old Amherst Rd #1. Features: Hardwood Floor, Dishwasher, Pets Allowed
+# of Bedrooms: 5
 # of Bathrooms: 2
 Contact Info: 
-Lease terms: rent period: monthly
-Amenities: no laundry on site
+Lease terms: 
+Amenities: Hardwood Floor, Dishwasher, Pets Allowed
