@@ -1,11 +1,11 @@
 Doc ID: 5
-Source Name: Kamins Real Estate
-Address: 355 Amherst Rd B – Belchertown, Belchertown MA
-Price: 0
-Source URL: https://kaminsrealestate.com/rental/355-amherst-rd-b-belchertown/
-Raw Description: 
+Source Name: UMass Off-Campus Housing
+Address: 45 Roosevelt St., Hadley, MA 01035
+Price: 675
+Source URL: https://offcampushousing.umass.edu/housing/property/large-room-in-our-home-no-kitchen-privileges/ocpr6g21x2
+Raw Description: Large room in our home. No Kitchen privileges.. 0.5 miles to UMass.
 # of Bedrooms: 1
-# of Bathrooms: 1
-Contact Info: (413) 253-2515
-Lease terms: 
-Amenities: Type: House
+# of Bathrooms: 0
+Contact Info: (413) 549-0060
+Lease terms: 9 Month Lease
+Amenities: 

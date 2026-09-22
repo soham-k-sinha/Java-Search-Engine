@@ -1,11 +1,11 @@
 Doc ID: 10
-Source Name: Kamins Real Estate
-Address: 235B Amherst Road, B/235 Amherst Road, Belchertown MA 01007
-Price: 1,450
-Source URL: https://kaminsrealestate.com/rental/235b-amherst-road/
-Raw Description: Nice big living space / open floor plan. Eat-in Kitchen. Cabbana styled bathroom with stand up shower. Nice yard, plenty of parking. $1,450/mo. Available September 1st, 2026.
+Source Name: UMass Off-Campus Housing
+Address: 156 Suffield St, Agawam, MA 01001
+Price: 1,775
+Source URL: https://offcampushousing.umass.edu/housing/property/156-suffield-st-agawam-ma/yrmgx3v
+Raw Description: 156 Suffield St (Agawam, MA). 21.8 miles to UMass.
 # of Bedrooms: 2
-# of Bathrooms: 1
-Contact Info: (413) 253-2515
-Lease terms: 
-Amenities: Type: Apartment
+# of Bathrooms: 0
+Contact Info: (413) 241-3199
+Lease terms: 1 Month Lease
+Amenities: 

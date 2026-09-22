@@ -153,11 +153,12 @@ public class ValleyPMAdapter implements Callable<List<Document>> {
                 }
 
                 // --- Address ---
-                // Address is usually in a separate element with text containing "MA" and a ZIP
                 String address = "";
                 for (Element el : card.getAllElements()) {
                     String text = el.ownText().trim();
-                    if (text.matches(".*\\d+.*,.*MA.*\\d{5}.*")) {
+                    if (text.length() > 5 && text.length() < 100
+                            && text.matches(".*,\\s*[A-Z][a-z]+.*,\\s*MA(\\s+\\d{5})?.*")
+                            && !text.contains("Available") && !text.contains("Listing")) {
                         address = text.replaceAll(",\\s*USA\\s*$", "").trim();
                         break;
                     }
@@ -237,6 +238,20 @@ public class ValleyPMAdapter implements Callable<List<Document>> {
                     if (detail.bedrooms > 0) bedrooms = detail.bedrooms;
                     if (detail.bathrooms > 0) bathrooms = detail.bathrooms;
                     if (!detail.address.isEmpty()) address = detail.address;
+                }
+
+                if (address.isEmpty()) {
+                    boolean found = false;
+                    for (String city : new String[]{"Hadley", "Amherst", "Sunderland", "Belchertown", "Northampton"}) {
+                        if (name.contains(city)) {
+                            address = city + ", MA";
+                            found = true;
+                            break;
+                        }
+                    }
+                    if (!found) {
+                        address = "Amherst area, MA";
+                    }
                 }
 
                 Document doc = new Document(

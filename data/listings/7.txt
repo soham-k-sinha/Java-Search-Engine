@@ -1,11 +1,11 @@
 Doc ID: 7
-Source Name: Valley Property Management
-Address: 
-Price: 0
-Source URL: https://valleypm.com/property/1-bedroom-apartment-for-rent-hadley-ma/
-Raw Description: Welcome to this quiet apartment rental on River Drive Hadley — a beautifully maintained, oversized 1-bedroom, 1-bathroom apartment offering the perfect blend of comfort, character, and convenience. Situated in a scenic and peaceful north Hadley location, this apartment is filled with excellent natural light that beautifully highlights the gorgeous, pristine hardwood floors stretching throughout the living spaces. The layout is exceptionally spacious, providing plenty of room for both a comfortable living setup and a dedicated home office workspace if needed.
+Source Name: UMass Off-Campus Housing
+Address: 111 Channel Drive, Belchertown, MA 01007
+Price: 1,800
+Source URL: https://offcampushousing.umass.edu/housing/property/beautiful-first-floor-lakeside-quiet-1-2-bdrm-apartment-6mi-from-amherst-academic/ocp0pz27c0
+Raw Description: Beautiful first floor lakeside, quiet 1-2 bdrm apartment; 6mi. from Amherst, academic. 7.2 miles to UMass.
 # of Bedrooms: 1
-# of Bathrooms: 1
-Contact Info: 413-225-1105
-Lease terms: Payments Required: First Mo.
-Amenities: Rent Includes: Lawn & Yard Care, Snow Plowing (Tenants Shovel), Water & Sewer Heat Type: Oil Air Conditioning: Window AC Possible (tenant provides) Appliances Provided: Fridge, Stove Laundry: Laundrom
+# of Bathrooms: 0
+Contact Info: (413) 330-4909
+Lease terms: 9 Month Lease
+Amenities: 

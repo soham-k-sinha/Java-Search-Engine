@@ -1,0 +1,11 @@
+Doc ID: 282
+Source Name: Kamins Real Estate
+Address: 5 Surrey Lane, Amherst MA
+Price: 0
+Source URL: https://kaminsrealestate.com/rental/5-surrey-lane/
+Raw Description: 5 Surrey Lane. 5 bedroom, 2 bathroom rental in the Amherst area.
+# of Bedrooms: 5
+# of Bathrooms: 2
+Contact Info: (413) 253-2515
+Lease terms: 
+Amenities: 

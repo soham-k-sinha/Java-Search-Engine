@@ -15,13 +15,6 @@ import java.util.concurrent.Callable;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-/**
- * Crawls kaminsrealestate.com for Kamins rental listings.
- * 
- * Two-phase crawl:
- * 1. List pages at /for-rent-residential/ -> collect addresses, beds, baths, price, detail URLs
- * 2. Each detail page at /rental/{slug}/ -> description, property type, amenities
- */
 public class KaminsAdapter implements Callable<List<Document>> {
 
     private static final String BASE_URL = "https://kaminsrealestate.com";
@@ -35,9 +28,6 @@ public class KaminsAdapter implements Callable<List<Document>> {
 
     private Map<String, String> cookies = new HashMap<>();
 
-    /**
-     * Holds data collected from the list page card, before we fetch the detail page.
-     */
     private static class CardData {
         String name;
         String url;
@@ -53,7 +43,6 @@ public class KaminsAdapter implements Callable<List<Document>> {
         System.out.println("[Kamins] Starting crawl...");
 
         try {
-            // Init session cookies
             try {
                 Connection.Response resp = Jsoup.connect(BASE_URL)
                         .userAgent("Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36")
@@ -64,7 +53,6 @@ public class KaminsAdapter implements Callable<List<Document>> {
                 System.err.println("[Kamins] Cookie init failed: " + e.getMessage());
             }
 
-            // Phase 1: Collect card data from list pages
             List<CardData> cards = new ArrayList<>();
             Set<String> seenUrls = new HashSet<>();
             int currentPage = 1;
@@ -89,57 +77,22 @@ public class KaminsAdapter implements Callable<List<Document>> {
                 Thread.sleep(DELAY_MS);
             }
 
-            System.out.println("[Kamins] Total cards: " + cards.size() + ". Fetching detail pages...");
+            System.out.println("[Kamins] Total cards: " + cards.size());
 
-            // Phase 2: Fetch each detail page and create Documents with full data
             for (CardData card : cards) {
-                Thread.sleep(DELAY_MS);
-
-                String description = "";
-                String leaseTerms = "";
-                String amenities = "";
-                String propertyType = "";
-
-                org.jsoup.nodes.Document detailPage = fetchPage(card.url);
-                if (detailPage != null) {
-                    // --- Description ---
-                    // The listing description is in the article/entry content area.
-                    // Skip Kamins boilerplate paragraphs.
-                    StringBuilder desc = new StringBuilder();
-                    Elements paragraphs = detailPage.select("article p, .entry-content p, .elementor-widget-text-editor p");
-                    for (Element p : paragraphs) {
-                        String text = p.text().trim();
-                        if (text.isEmpty()) continue;
-                        if (text.contains("Early Termination") || text.contains("Future Renter") ||
-                                text.contains("fair housing") || text.contains("Not responsible") ||
-                                text.contains("errors or omissions") || text.contains("Terms of Use") ||
-                                text.contains("Privacy Policy") || text.contains("Resident Forms") ||
-                                text.contains("families with minor")) {
-                            continue;
-                        }
-                        if (desc.length() > 0) desc.append(" ");
-                        desc.append(text);
-                        if (desc.length() > 500) break;
+                String description = card.name;
+                if (card.bedrooms > 0) {
+                    description += ". " + card.bedrooms + " bedroom";
+                    if (card.bathrooms > 0) {
+                        description += ", " + card.bathrooms + " bathroom";
                     }
-                    description = desc.toString();
-
-                    // --- Property type from "Property Features" list ---
-                    Elements features = detailPage.select("li");
-                    for (Element li : features) {
-                        String text = li.text().trim();
-                        if (text.equals("Apartment") || text.equals("House") ||
-                                text.equals("Townhouse") || text.equals("Duplex")) {
-                            propertyType = text;
-                            break;
-                        }
-                    }
-                    if (!propertyType.isEmpty()) {
-                        amenities = "Type: " + propertyType;
-                    }
-
-                    System.out.println("[Kamins] Detail: " + card.name + " -> " + 
-                            description.substring(0, Math.min(60, description.length())) + "...");
+                    description += " rental in the Amherst area.";
                 }
+                if (card.price > 0) {
+                    description += " $" + card.price + "/month.";
+                }
+
+                String amenities = "";
 
                 Document doc = new Document(
                         SOURCE_NAME,
@@ -149,11 +102,12 @@ public class KaminsAdapter implements Callable<List<Document>> {
                         card.price,
                         card.bathrooms,
                         description,
-                        leaseTerms,
+                        "",
                         DEFAULT_PHONE,
                         amenities
                 );
                 listings.add(doc);
+                System.out.println("[Kamins] Added: " + card.name);
             }
 
         } catch (InterruptedException e) {
@@ -182,10 +136,6 @@ public class KaminsAdapter implements Callable<List<Document>> {
         }
     }
 
-    /**
-     * Collects card data (address, URL, beds, baths, price) from one list page.
-     * Only adds cards whose URL hasn't been seen before.
-     */
     private void collectCards(org.jsoup.nodes.Document page, List<CardData> cards, Set<String> seenUrls) {
         Elements propertyLinks = page.select("h3 > a[href*=/rental/]");
 
@@ -197,8 +147,8 @@ public class KaminsAdapter implements Callable<List<Document>> {
                 if (seenUrls.contains(propertyUrl)) continue;
                 seenUrls.add(propertyUrl);
 
-                Element card = link.parent(); // h3
-                if (card != null) card = card.parent(); // card wrapper
+                Element card = link.parent();
+                if (card != null) card = card.parent();
                 if (card != null && card.text().length() < 50) {
                     card = card.parent();
                 }
@@ -206,7 +156,6 @@ public class KaminsAdapter implements Callable<List<Document>> {
 
                 String cardText = card.text();
 
-                // --- Address ---
                 String address = name;
                 Elements townLinks = card.select("a[href*=/rental/]");
                 for (Element tl : townLinks) {
@@ -217,14 +166,12 @@ public class KaminsAdapter implements Callable<List<Document>> {
                     }
                 }
 
-                // --- Price ---
                 int price = 0;
                 Matcher priceMatcher = PRICE_PATTERN.matcher(cardText);
                 if (priceMatcher.find()) {
                     price = Integer.parseInt(priceMatcher.group(1).replace(",", ""));
                 }
 
-                // --- Beds and Baths ---
                 int bedrooms = 0;
                 int bathrooms = 0;
                 List<String> smallNumbers = new ArrayList<>();

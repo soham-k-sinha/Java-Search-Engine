@@ -1,0 +1,11 @@
+Doc ID: 250
+Source Name: UMass Off-Campus Housing
+Address: Hadley, MA 01035
+Price: 6,000
+Source URL: https://offcampushousing.umass.edu/housing/property/17-n-maple-st/pjjlhrs
+Raw Description: 17 N Maple St. 2.3 miles to UMass.
+# of Bedrooms: 6
+# of Bathrooms: 0
+Contact Info: (617) 682-6680
+Lease terms: 
+Amenities: 

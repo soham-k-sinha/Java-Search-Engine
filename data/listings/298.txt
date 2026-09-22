@@ -1,0 +1,11 @@
+Doc ID: 298
+Source Name: Craigslist
+Address: Belchertown
+Price: 1,200
+Source URL: https://www.craigslist.org/view/d/belchertown-bedroom-apartment/sG5paRQJdQDX9edsB7SR14
+Raw Description: 1 bedroom apartment available for rent in a multifamily apartment building. Can be used as a 2 bedroom.
+# of Bedrooms: 2
+# of Bathrooms: 1
+Contact Info: 
+Lease terms: rent period: monthly
+Amenities: no laundry on site, off-street parking, no smoking

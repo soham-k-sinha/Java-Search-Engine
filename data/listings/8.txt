@@ -1,11 +1,11 @@
 Doc ID: 8
-Source Name: Kamins Real Estate
-Address: 98 Stockbridge St 2 – Hadley, Hadley MA
-Price: 0
-Source URL: https://kaminsrealestate.com/rental/98-stockbridge-st-2-hadley/
-Raw Description: 
+Source Name: UMass Off-Campus Housing
+Address: 8 Daviau Dr, Chicopee, MA 01020
+Price: 1,950
+Source URL: https://offcampushousing.umass.edu/housing/property/8-daviau-dr-chicopee-ma/fl1ph5t
+Raw Description: 8 Daviau Dr (Chicopee, MA). 15.1 miles to UMass.
 # of Bedrooms: 2
-# of Bathrooms: 1
-Contact Info: (413) 253-2515
-Lease terms: 
-Amenities: Type: House
+# of Bathrooms: 0
+Contact Info: 
+Lease terms: 12 Month Lease
+Amenities: 

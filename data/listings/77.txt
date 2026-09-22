@@ -1,0 +1,11 @@
+Doc ID: 77
+Source Name: UMass Off-Campus Housing
+Address: Northampton, MA 01060
+Price: 2,200
+Source URL: https://offcampushousing.umass.edu/housing/property/spacious-3-bedroom-apartment-on-smith-college-campus/ocpmnwe2sj
+Raw Description: Spacious 3-bedroom apartment on Smith College campus. 9.3 miles to UMass.
+# of Bedrooms: 3
+# of Bathrooms: 0
+Contact Info: (505) 670-1951
+Lease terms: 1 Month Lease
+Amenities: 

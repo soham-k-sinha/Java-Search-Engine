@@ -1,11 +1,11 @@
 Doc ID: 2
-Source Name: Kamins Real Estate
-Address: 41 Cottage St, Amherst MA 01002
-Price: 0
-Source URL: https://kaminsrealestate.com/rental/41-cottage-st/
-Raw Description: 
-# of Bedrooms: 3
-# of Bathrooms: 2
-Contact Info: (413) 253-2515
+Source Name: UMass Off-Campus Housing
+Address: Williamsburg, MA 01039
+Price: 1,600
+Source URL: https://offcampushousing.umass.edu/housing/property/15-s-main-street-unit-b/y77ly8t
+Raw Description: 15 S Main Street Unit B. 13.8 miles to UMass.
+# of Bedrooms: 2
+# of Bathrooms: 0
+Contact Info: (413) 287-6874
 Lease terms: 
-Amenities: Type: House
+Amenities: 

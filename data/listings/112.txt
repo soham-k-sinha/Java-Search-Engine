@@ -1,0 +1,11 @@
+Doc ID: 112
+Source Name: UMass Off-Campus Housing
+Address: 9 Hobart Lane, Amherst, MA 01002
+Price: 3,000
+Source URL: https://offcampushousing.umass.edu/housing/property/9-hobart-lane-3-br-campus-area/ocplg558wd
+Raw Description: 9 Hobart Lane 3 BR (Campus Area). 0.4 miles to UMass.
+# of Bedrooms: 3
+# of Bathrooms: 0
+Contact Info: (413) 992-6153
+Lease terms: 12 Month Lease
+Amenities: 

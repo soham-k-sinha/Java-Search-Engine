@@ -1,0 +1,11 @@
+Doc ID: 235
+Source Name: UMass Off-Campus Housing
+Address: 25 North Pleasant Street, Amherst, MA 01002
+Price: 1,900
+Source URL: https://offcampushousing.umass.edu/housing/property/center-of-town-apartments/ocp0zprdv0
+Raw Description: Center of town apartments. 0.5 miles to UMass.
+# of Bedrooms: 4
+# of Bathrooms: 0
+Contact Info: (413) 406-2984
+Lease terms: 12 Month Lease
+Amenities: 

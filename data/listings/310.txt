@@ -1,0 +1,11 @@
+Doc ID: 310
+Source Name: Craigslist
+Address: Sunderland
+Price: 2,650
+Source URL: https://www.craigslist.org/view/d/sunderland-bedroom-apartment/521o6645tFaAaeHkhy5Tqf
+Raw Description: 3 Bedroom, 1 Bathroom Apartment for rent - Available November 15 (negotiable). Most Pets ok, with pet fee. Tennis court, pool, off-leash dog park, on-site laundry, plenty of parking, bike storage, close to PVTA bus stop, convenient to UMASS Amherst. $2650 per month. https://cliffsideapts.com/gallery Email for more details.
+# of Bedrooms: 3
+# of Bathrooms: 1
+Contact Info: 
+Lease terms: rent period: monthly
+Amenities: laundry on site, off-street parking

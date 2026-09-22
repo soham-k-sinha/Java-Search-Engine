@@ -1,0 +1,11 @@
+Doc ID: 123
+Source Name: UMass Off-Campus Housing
+Address: 61 Gray Street, Amherst, MA 01002
+Price: 5,500
+Source URL: https://offcampushousing.umass.edu/housing/property/61-gray-st-unit-2/ocp8cvwyp2
+Raw Description: 61 Gray St Unit #2. 0.7 miles to UMass.
+# of Bedrooms: 4
+# of Bathrooms: 0
+Contact Info: 
+Lease terms: 12 Month Lease
+Amenities: 

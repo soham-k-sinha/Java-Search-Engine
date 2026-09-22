@@ -1,11 +1,11 @@
 Doc ID: 4
-Source Name: Kamins Real Estate
-Address: 355 Amherst Rd A – Belchertown, Belchertown MA
-Price: 0
-Source URL: https://kaminsrealestate.com/rental/355-amherst-rd-a-belchertown/
-Raw Description: 
-# of Bedrooms: 3
-# of Bathrooms: 2
-Contact Info: (413) 253-2515
+Source Name: UMass Off-Campus Housing
+Address: 78 Melwood Ave, East Longmeadow, MA 01028
+Price: 3,000
+Source URL: https://offcampushousing.umass.edu/housing/property/78-melwood-avenue/ld121wd
+Raw Description: 78 Melwood Avenue. 30 miles to UMass.
+# of Bedrooms: 6
+# of Bathrooms: 0
+Contact Info: 
 Lease terms: 
-Amenities: Type: House
+Amenities: 

@@ -1,11 +1,11 @@
 Doc ID: 15
-Source Name: Valley Property Management
-Address: 
-Price: 0
-Source URL: https://valleypm.com/property/82-comins-rd-hadley/
-Raw Description: Renovated 2-Bedroom Duplex with Farm Views – Hadley Welcome to 82 Comins Road, Hadley – a beautifully renovated second-floor duplex apartment offering modern finishes, peaceful surroundings, and convenient access to Amherst and Northampton. With views over 28 acres of Hadley farmland, this home provides a unique blend of comfort and scenic living. Available September 1st, this apartment features updated interiors, outdoor space, and included exterior services. Property Highlights: Second-floor duplex apartment 2 bedrooms 1 full bathroom Beautiful wood floors Updated kitchen with stainless steel appliances Renovated bathroom with upscale finishes Rear deck with views of farmland Laundry connections in basement High-efficiency boilers for lower heating costs Off-street parking for 2 cars Professionally managed property
-# of Bedrooms: 2
-# of Bathrooms: 1
-Contact Info: 413-225-1105
-Lease terms: Payments Required: First Mo.
-Amenities: Rent Includes: Lawn & Yard Care, Snow Plowing (Tenants Shovel), Water & Sewer Heat Type: Propane Air Conditioning: Window AC Possible (tenant provides) Appliances Provided: Fridge, Stove Laundry: Laun
+Source Name: UMass Off-Campus Housing
+Address: 440 Pine Street, Amherst, MA 01002
+Price: 877
+Source URL: https://offcampushousing.umass.edu/housing/property/spring-sublet-7-minutes-from-campus/ocp947jxt7
+Raw Description: Spring Sublet - 7 minutes from campus!. 1.3 miles to UMass.
+# of Bedrooms: 1
+# of Bathrooms: 0
+Contact Info: (617) 775-0373
+Lease terms: 12 Month Lease
+Amenities: 
