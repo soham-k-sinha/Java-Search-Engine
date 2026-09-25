@@ -1,3 +1,4 @@
 out/
 *.class
-umass-html
+data/listings/
+data/index.ser

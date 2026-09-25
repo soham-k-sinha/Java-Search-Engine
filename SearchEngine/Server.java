@@ -1,6 +1,7 @@
 package SearchEngine;
 
 import java.io.*;
+import java.net.InetSocketAddress;
 import java.net.ServerSocket;
 import java.net.Socket;
 import java.net.URLDecoder;
@@ -24,8 +25,9 @@ public class Server {
     }
 
     public void start() throws IOException {
-        ServerSocket serverSocket = new ServerSocket(port);
-        System.out.println("Server running on http://localhost:" + port);
+        ServerSocket serverSocket = new ServerSocket();
+        serverSocket.bind(new InetSocketAddress("0.0.0.0", port));
+        System.out.println("Server running on http://0.0.0.0:" + port);
 
         while (true) {
             Socket client = serverSocket.accept();

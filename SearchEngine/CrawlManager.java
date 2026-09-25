@@ -12,8 +12,6 @@ public class CrawlManager {
 
     private static final int THREAD_POOL_SIZE = 5;
     private static final String INDEX_PATH = "data/index.ser";
-    private static final int SERVER_PORT = 8080;
-
     public static void main(String[] args) {
         System.out.println("=== Housing Search Engine - CrawlManager ===\n");
 
@@ -73,8 +71,14 @@ public class CrawlManager {
             System.out.println("[CrawlManager] Index built and serialized to " + INDEX_PATH);
             System.out.println("[CrawlManager] Index contains " + index.docCount + " documents, " + index.index.size() + " unique terms");
 
-            System.out.println("\n[CrawlManager] Starting server on port " + SERVER_PORT + "...");
-            Server server = new Server(SERVER_PORT, index);
+            int port = 8080;
+            String envPort = System.getenv("PORT");
+            if (envPort != null && !envPort.isEmpty()) {
+                port = Integer.parseInt(envPort);
+            }
+
+            System.out.println("\n[CrawlManager] Starting server on port " + port + "...");
+            Server server = new Server(port, index);
             server.start();
 
         } catch (Exception e) {
